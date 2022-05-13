@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:sampleproject/screens/sign_in_screen/components/custome_icon.dart';
 import 'package:sampleproject/screens/splash_screen/components/button.dart';
 
-import '../../../constants.dart';
-import '../../../form_error.dart';
-import '../../../size_config.dart';
+import '../../constants.dart';
+import '../../components/form_error.dart';
+import '../../size_config.dart';
 
 class SignUpForm extends StatefulWidget {
   @override
@@ -15,6 +15,7 @@ class _SignUpFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
   String? email;
   String? password;
+  // ignore: non_constant_identifier_names
   String? conform_password;
   bool remember = false;
   final List<String?> errors = [];

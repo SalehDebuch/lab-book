@@ -5,8 +5,8 @@ import 'package:sampleproject/screens/sign_in_screen/components/custome_icon.dar
 import 'package:sampleproject/screens/splash_screen/components/button.dart';
 
 import '../../../constants.dart';
-import '../../../form_error.dart';
-import '../../../keyboard.dart';
+import '../../../components/form_error.dart';
+import '../../../components/keyboard.dart';
 import '../../../size_config.dart';
 
 class SignForm extends StatefulWidget {
@@ -66,6 +66,7 @@ class _SignFormState extends State<SignForm> {
                   ),
                 ),
                 Text("  Remember me"),
+                SizedBox(width: 10),
                 Spacer(),
                 GestureDetector(
                   onTap: () => Navigator.pushNamed(
@@ -102,11 +103,11 @@ class _SignFormState extends State<SignForm> {
       obscureText: true,
       onSaved: (newValue) => password = newValue,
       onChanged: (value) {
+        setState(() {});
+
         if (value.isNotEmpty) {
           removeError(error: kPassNullError);
           removeError(error: kShortPassError);
-
-          print(value);
         } else if (value.length >= 8) {
           removeError(error: kShortPassError);
         }
@@ -127,8 +128,6 @@ class _SignFormState extends State<SignForm> {
         return null;
       },
       decoration: InputDecoration(
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(28), gapPadding: 10),
         focusedBorder:
@@ -139,6 +138,7 @@ class _SignFormState extends State<SignForm> {
         // If  you are using latest version of flutter then lable text and hint text shown like this
         // if you r using flutter less then 1.20.* then maybe this is not working properly
         suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
+        floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
     );
   }
@@ -150,6 +150,7 @@ class _SignFormState extends State<SignForm> {
       onChanged: (value) {
         if (value.isNotEmpty) {
           removeError(error: kEmailNullError);
+          removeError(error: kInvalidEmailError);
         } else if (emailValidatorRegExp.hasMatch(value)) {
           removeError(error: kInvalidEmailError);
         }

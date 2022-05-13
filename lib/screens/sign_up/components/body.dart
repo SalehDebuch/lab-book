@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sampleproject/constants.dart';
 import 'package:sampleproject/screens/sign_in_screen/components/social_icons.dart';
 
+import '../../../constants.dart';
 import '../../../size_config.dart';
-import 'sign_up_form.dart';
+import '../../splash_screen/sign_up_form.dart';
 
 class Body extends StatelessWidget {
   @override

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sampleproject/constants.dart';
 import 'package:sampleproject/routes.dart';
-import 'package:sampleproject/test_list_views/tests_list_screen.dart';
+import 'package:sampleproject/screens/test_list_views/tests_list_screen.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(

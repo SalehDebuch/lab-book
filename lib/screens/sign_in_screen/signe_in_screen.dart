@@ -15,7 +15,7 @@ class SignIn extends StatelessWidget {
         centerTitle: true,
         elevation: 0,
         title: const Text(
-          'Sign In',
+          'تسجيل الدخول',
           style: TextStyle(
             color: Colors.black45,
             letterSpacing: 4,

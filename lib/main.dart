@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sampleproject/constants.dart';
 import 'package:sampleproject/routes.dart';
+import 'package:sampleproject/screens/splash_screen/splash_screen.dart';
 import 'package:sampleproject/screens/test_list_views/tests_list_screen.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
-      statusBarColor: kPrimaryColr,
+      statusBarColor: Color.fromARGB(255, 5, 77, 81),
       statusBarBrightness: Brightness.dark,
       statusBarIconBrightness: Brightness.light,
     ),
@@ -29,14 +30,13 @@ class MyApp extends StatelessWidget {
         primaryColor: kPrimaryColr,
         iconTheme: const IconThemeData(color: Colors.black),
         scaffoldBackgroundColor: Colors.white,
-        fontFamily: 'Muli',
         textTheme: const TextTheme(
             //  bodyText1: TextStyle(color: kTextColor),
             //  bodyText2: TextStyle(color: kTextColor),
             ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: TestsLists.routname,
+      initialRoute: SplashScreen.routname, //SplashScreen.routname
       routes: routes,
     );
   }

@@ -8,6 +8,6 @@ class PdfVeiwer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HomePage();
+    return PdfViewer();
   }
 }

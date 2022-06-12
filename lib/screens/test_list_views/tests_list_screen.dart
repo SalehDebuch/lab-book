@@ -15,6 +15,10 @@ class _TestsListsState extends State<TestsLists> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          leading: Icon(
+            Icons.abc,
+            size: 0,
+          ),
           title: Text(
             'قائمة التحاليل المخبرية',
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26),

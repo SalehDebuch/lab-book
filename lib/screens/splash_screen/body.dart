@@ -64,7 +64,7 @@ class _BodyState extends State<Body> {
                       width: double.infinity,
                       height: getProportionateScreenHeight(56),
                       child: CustomeButton(
-                          text: 'continue',
+                          text: 'استمر ',
                           press: () {
                             Navigator.pushNamed(context, SignIn.routname);
                           }),

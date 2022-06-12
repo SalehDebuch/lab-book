@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'size_config.dart';
 
-const kPrimaryColr = Color(0xFFFF7643);
+const kPrimaryColr = Color(0xFF2F8F9D);
 const kPrimaryLightColor = Color(0xFFFFECDF);
 const kPrimaryGradientColor = LinearGradient(
   begin: Alignment.topLeft,
@@ -22,18 +22,27 @@ final headingStyle = TextStyle(
 // Form Error
 final RegExp emailValidatorRegExp =
     RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
-const String kEmailNullError = "Please Enter your email";
-const String kInvalidEmailError = "Please Enter Valid Email";
-const String kPassNullError = "Please Enter your password";
-const String kShortPassError = "Password is too short";
-const String kMatchPassError = "Passwords don't match";
-const String kNamelNullError = "Please Enter your name";
-const String kPhoneNumberNullError = "Please Enter your phone number";
-const String kAddressNullError = "Please Enter your address";
-/*
+const String kEmailNullError =
+    "يرجى ادخال بريدك الالكتروني"; //Please Enter your email
+const String kInvalidEmailError =
+    "يرجى ادخال بريد الكتروني صالح"; //Please Enter Valid Email
+const String kPassNullError =
+    "يرجى ادخال كلمة السر"; //Please Enter your password
+const String kShortPassError = "كلمة السر قصيرة جداً"; //Password is too short
+const String kMatchPassError = "كلمة السر غير متطابقة"; //Passwords don't match
+const String kPassConNullError =
+    "يرجى تأكيد كلمة السر"; // Please confirm your password
+const String kNamelNullError = "يرجى ادخال الاسم"; //Please Enter your name
+const String kMobileNumberNullError =
+    " أدخل كلمة السر  "; //Passwords don't match
+
+const String kPhoneNumberNullError =
+    "يرجى ادخال رقم الموبايل"; //Please Enter your phone number
+//const String kAddressNullError = "";//Please Enter your address
+
 final otpInputDecoration = InputDecoration(
   contentPadding:
-      EdgeInsets.symmetric(vertical: getProportionateScreenWidth(15)!),
+      EdgeInsets.symmetric(vertical: getProportionateScreenWidth(15)),
   border: outlineInputBorder(),
   focusedBorder: outlineInputBorder(),
   enabledBorder: outlineInputBorder(),
@@ -41,8 +50,7 @@ final otpInputDecoration = InputDecoration(
 
 OutlineInputBorder outlineInputBorder() {
   return OutlineInputBorder(
-    borderRadius: BorderRadius.circular(getProportionateScreenWidth(15)!),
+    borderRadius: BorderRadius.circular(getProportionateScreenWidth(15)),
     borderSide: const BorderSide(color: kTextColor),
   );
 }
-*/

@@ -5,6 +5,7 @@ import 'package:sampleproject/screens/sign_up/sign_up_screen.dart';
 import 'package:sampleproject/screens/test_list_views/tests_list_screen.dart';
 import 'screens/forgot_password/forgot_password_screen.dart';
 import 'screens/login_success/login_success_screen.dart';
+import 'screens/otp/otp_screen.dart';
 import 'screens/splash_screen/splash_screen.dart';
 
 // We use name route
@@ -12,7 +13,9 @@ import 'screens/splash_screen/splash_screen.dart';
 final Map<String, WidgetBuilder> routes = {
   SplashScreen.routname: (context) => SplashScreen(),
   LoginSuccessScreen.routeName: (context) => LoginSuccessScreen(),
+  ForgotPasswordScreen.routeName: (context) => ForgotPasswordScreen(),
   SignIn.routname: (context) => SignIn(),
+  OtpScreen.routeName: (context) => OtpScreen(),
   ForgotPasswordScreen.routeName: (context) => ForgotPasswordScreen(),
   SignUpScreen.routeName: (context) => SignUpScreen(),
   PdfVeiwer.routname: (context) => PdfVeiwer(),

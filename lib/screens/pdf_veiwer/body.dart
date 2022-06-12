@@ -1,25 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:sampleproject/screens/test_list_views/tests_list_screen.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
-class HomePage extends StatefulWidget {
-  @override
-  _HomePage createState() => _HomePage();
-}
+import '../../arguments.dart';
 
-class _HomePage extends State<HomePage> {
-  final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
+// ignore: must_be_immutable
+class PdfViewer extends StatelessWidget {
+  final GlobalKey<SfPdfViewerState> _pdfViewerKey =
+      GlobalKey(); //This for Bookmark
+  // late PdfViewerController _pdfViewerController;
 
-  @override
-  void initState() {
-    super.initState();
-  }
+  // final String testTitle ;
+  //final int pdfIndex ;
 
   @override
   Widget build(BuildContext context) {
+    // var pdfIndex = 3;
+    final data = ModalRoute.of(context)!.settings.arguments as ScreenArguments;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Fast Glucose Test',
+        leading: GestureDetector(
+          child: Icon(
+            Icons.arrow_back,
+          ),
+          onTap: () {
+            Navigator.pushReplacementNamed(context, TestsLists.routname);
+          },
+        ),
+        title: Text(
+          '${data.title}', //$testName
           textAlign: TextAlign.center,
         ),
         actions: <Widget>[
@@ -30,14 +40,20 @@ class _HomePage extends State<HomePage> {
               semanticLabel: 'Bookmark',
             ),
             onPressed: () {
-              _pdfViewerKey.currentState?.openBookmarkView();
+              _pdfViewerKey.currentState
+                  ?.openBookmarkView(); // This for Bookmark
             },
           ),
         ],
       ),
-      body: SfPdfViewer.network(
-        'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
-        key: _pdfViewerKey,
+      body: SfPdfViewer.asset(
+        'assets/pdfs/${data.index}.pdf', //{$pdfIndex}
+
+        //controller: _pdfViewerController,
+        key: _pdfViewerKey, // This for Bookmark
+        canShowScrollHead: true,
+        canShowScrollStatus: true,
+        canShowPaginationDialog: true,
       ),
     );
   }

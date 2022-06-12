@@ -65,14 +65,14 @@ class _SignFormState extends State<SignForm> {
                     },
                   ),
                 ),
-                Text("  Remember me"),
+                Text("  تذكر كلمة السر"),
                 SizedBox(width: 10),
                 Spacer(),
                 GestureDetector(
                   onTap: () => Navigator.pushNamed(
                       context, ForgotPasswordScreen.routeName),
                   child: Text(
-                    "Forgot Password",
+                    "نسيت كلمة السر؟",
                     style: TextStyle(decoration: TextDecoration.underline),
                   ),
                 )
@@ -82,7 +82,7 @@ class _SignFormState extends State<SignForm> {
             FormError(errors: errors),
             SizedBox(height: getProportionateScreenHeight(20)),
             CustomeButton(
-              text: "Continue",
+              text: "موافق",
               press: () {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
@@ -133,8 +133,8 @@ class _SignFormState extends State<SignForm> {
         focusedBorder:
             OutlineInputBorder(borderRadius: BorderRadius.circular(28)),
 
-        labelText: "Password",
-        hintText: "Enter your password",
+        labelText: "كلمة السر",
+        hintText: "ادخل كلمة السر",
         // If  you are using latest version of flutter then lable text and hint text shown like this
         // if you r using flutter less then 1.20.* then maybe this is not working properly
         suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
@@ -174,8 +174,8 @@ class _SignFormState extends State<SignForm> {
         focusedBorder:
             OutlineInputBorder(borderRadius: BorderRadius.circular(28)),
 
-        labelText: "Email",
-        hintText: "Enter your email",
+        labelText: "اسم المستخدم",
+        hintText: "ادخل حسابك الالكتروني ",
         // If  you are using latest version of flutter then lable text and hint text shown like this
         // if you r using flutter less then 1.20.* then maybe this is not working properly
         suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),

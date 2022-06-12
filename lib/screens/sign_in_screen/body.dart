@@ -19,7 +19,7 @@ class Body extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                'Welcome Back',
+                'أهلا وسهلا بكم ',
                 style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
@@ -27,8 +27,9 @@ class Body extends StatelessWidget {
                 ),
               ),
               const Text(
-                "Sign in with your email and password  \nor continue with social media",
+                "   قم بتسجيل الدخول باستخدام كلمة السر   \n او استمر  باستخدام  منصات التواصل الاجتماعي ", //"Sign in with your email and password  \nor continue with social media",
                 textAlign: TextAlign.center,
+                textDirection: TextDirection.rtl,
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.08),
               Form(child: SignForm()),

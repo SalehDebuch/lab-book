@@ -3,7 +3,7 @@ import 'package:sampleproject/screens/sign_in_screen/components/social_icons.dar
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
-import '../../splash_screen/sign_up_form.dart';
+import 'sign_up_form.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -18,9 +18,9 @@ class Body extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: SizeConfig.screenHeight * 0.04), // 4%
-                Text("Register Account", style: headingStyle),
+                Text("  حساب جديد ", style: headingStyle), //Register Account
                 Text(
-                  "Complete your details or continue \nwith social media",
+                  "أكمل البيانات المطلوبة  \n   لإعداد حساب جديد ", //Complete your details or continue \nwith social media
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),

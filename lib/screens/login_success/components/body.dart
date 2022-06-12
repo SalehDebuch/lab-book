@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sampleproject/screens/splash_screen/components/button.dart';
+import 'package:sampleproject/screens/test_list_views/tests_list_screen.dart';
 
 import '../../../size_config.dart';
 
@@ -15,7 +16,7 @@ class Body extends StatelessWidget {
         // ),
         SizedBox(height: SizeConfig.screenHeight * 0.08),
         Text(
-          "Login Success",
+          " ",
           style: TextStyle(
             fontSize: getProportionateScreenWidth(30),
             fontWeight: FontWeight.bold,
@@ -23,13 +24,15 @@ class Body extends StatelessWidget {
           ),
         ),
         Spacer(),
-        SizedBox(
-          width: SizeConfig.screenWidth * 0.6,
-          child: CustomeButton(
-            text: "Back to home",
-            press: () {
-              //Navigator.pushNamed(context, HomeScreen.routeName);
-            },
+        Center(
+          child: SizedBox(
+            width: SizeConfig.screenWidth * 0.6,
+            child: CustomeButton(
+              text: "تصفح الموسوعة ",
+              press: () {
+                Navigator.pushNamed(context, TestsLists.routname);
+              },
+            ),
           ),
         ),
         Spacer(),
